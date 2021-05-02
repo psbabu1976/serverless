@@ -4,6 +4,6 @@
 <script>
     fetch("./netlify/functions/app")
     .then(res => {
-        document.getElementById("got").textContent = res;
+        document.getElementById("got").textContent = JSON.stringify(res);
     })
 </script>
