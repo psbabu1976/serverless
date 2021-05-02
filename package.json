@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "netlify-lambda build server",
-    "start": "nodemon server-local.js"
+    "start": "netlify-lambda serve server"
   },
   "keywords": [],
   "author": "",
