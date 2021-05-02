@@ -14,4 +14,5 @@ app.use('/.netlify/functions/app', router);
 
 app.listen(5000, ()=>console.log('Running on 5000...'));
 
+module.exports = app;
 module.exports.handler = serverless(app);
