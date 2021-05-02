@@ -3,7 +3,8 @@
     <div id="got"></div>
 <script>
     fetch("./netlify/functions/app")
-    .then(res => {
-        document.getElementById("got").textContent = JSON.stringify(res.data);
+    .then(res => data = res.json())
+    .then(data =>{
+        document.getElementById("got").textContent = JSON.stringify(data);
     })
 </script>
