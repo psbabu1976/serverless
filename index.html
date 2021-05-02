@@ -1,2 +1,9 @@
 <!DOCTYPE html>
-<object type="text/html" data="/.netlify/functions/app" style="width:100%;height:100%;">
+<!-- <object type="text/html" data="/.netlify/functions/app" style="width:100%;height:100%;"> -->
+    <div id="got"></div>
+<script>
+    fetch("./netlify/functions/app")
+    .then(res => {
+        document.getElementById("got").textContent = res;
+    })
+</script>

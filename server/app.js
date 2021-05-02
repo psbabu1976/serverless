@@ -13,7 +13,7 @@ router.get("/", (req,res)=>{
 })
 
 app.use('/.netlify/functions/app', router);
-app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
+// app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
 console.log(__dirname);
 
