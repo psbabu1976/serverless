@@ -3,7 +3,7 @@
     <div id="got"></div>
 <script>
     fetch("./netlify/functions/app")
-    .then(res => data)
+    .then(res => res.text())
     .then(data =>{
         document.getElementById("got").textContent = (data);
     })
