@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!-- <object type="text/html" data="/.netlify/functions/app" style="width:100%;height:100%;"> -->
-    <div id="got"></div>
+    <div id="got">Hi</div>
 <script>
     fetch("./netlify/functions/app")
     .then(res => res.text())
     .then(data =>{
-        document.getElementById("got").textContent = (data);
+        document.getElementById("got").innerHTML = (data);
     })
 </script>
