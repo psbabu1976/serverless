@@ -1,9 +1,10 @@
 <!DOCTYPE html>
     <div id="got">Hi</div>
 <script>
-    async ()=> await fetch(".netlify/functions/app")
-    .then(res => data= res.json())
-    .then(data =>{
+    async ()=> {
+        let res = await fetch(".netlify/functions/app");
+        res => data= res.json();
         document.getElementById("got").innerHTML = (data);
-    })
+    }
+    
 </script>
