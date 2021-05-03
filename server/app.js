@@ -11,14 +11,15 @@ let router = express.Router();
 router.get("/hello", (req,res)=>{
     res.send("Hello World!!!");
 })
-
+// app.use(express.static(__dirname + './'));
+router.get("/", (req,res)=>res.sendFile(process.cwd()+ '/index.html'))
 app.use('/.netlify/functions/app', router);
-// app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
+
 
 console.log(__dirname);
 
 
-// app.listen(5000, ()=>console.log('Running on 5000...'));
+//app.listen(5000, ()=>console.log('Running on 5000...'));
 
 //module.exports = app;
 module.exports.handler = serverless(app);
