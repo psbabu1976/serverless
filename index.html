@@ -1,8 +1,9 @@
 <!DOCTYPE html>
     <div id="got">Hi</div>
 <script>
+    console.log('haha');
     async ()=> {
-        console.log('haha');
+        
         let res = await fetch(".netlify/functions/app/hello");
         //res = res.json();
         document.getElementById("got").innerHTML = (res);
