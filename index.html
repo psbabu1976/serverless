@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-    <h1>Hello All</h1>
-    <div id="got">Hi</div>
+<h1>Hello All</h1>
+<div id="got">Hi</div>
 <script>
-    console.log('haha');
-    async ()=> {
-        
-        let res = await fetch(".netlify/functions/app/hello");
-        //res = res.json();
-        document.getElementById("got").innerHTML = (res);
-    }
-    
+    window.addEventListener('load', () => {
+        console.log('haha');
+
+        fetch(".netlify/functions/app/hello")
+            .then(r => r.text()).then(r => document.getElementById("got").innerHTML = r)
+    })
 </script>

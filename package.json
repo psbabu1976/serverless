@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "netlify-lambda build server",
-    "start": "netlify-lambda serve server"
+    "build": "set CONTEXT=production && netlify-lambda build server",
+    "start": "netlify-lambda serve server",
+    "postinstall": "netlify-lambda install"
   },
   "keywords": [],
   "author": "",

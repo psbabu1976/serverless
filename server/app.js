@@ -9,7 +9,12 @@ let app = express();
 let router = express.Router();
 
 router.get("/hello", (req,res)=>{
-    res.send("Hello World!!!");
+    res.json({
+        statusCode: 200,
+        body: JSON.stringify({
+          message: `Hello world ${Math.floor(Math.random() * 10)}`
+        })
+      });
 })
 // app.use(express.static(__dirname + './'));
 router.get("/", (req,res)=>res.sendFile(process.cwd()+ '/index.html'))
