@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <div id="got">Hi</div>
 <script>
-    fetch("./netlify/functions/app")
+    fetch(".netlify/functions/app")
     .then(res => data= res.json())
     .then(data =>{
         document.getElementById("got").innerHTML = (data);
