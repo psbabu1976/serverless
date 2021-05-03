@@ -9,7 +9,7 @@ let app = express();
 let router = express.Router();
 
 router.get("/", (req,res)=>{
-    res.send({msg:"Hi"});
+    res.send("Hello World!!!");
 })
 
 app.use('/.netlify/functions/app', router);
