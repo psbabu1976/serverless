@@ -2,7 +2,7 @@
     <div id="got">Hi</div>
 <script>
     async ()=> {
-        let res = await fetch(".netlify/functions/app");
+        let res = await fetch(".netlify/functions/app/hello");
         //res = res.json();
         document.getElementById("got").innerHTML = (res);
     }

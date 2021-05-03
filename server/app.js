@@ -8,7 +8,7 @@ const { Router } = require('express');
 let app = express();
 let router = express.Router();
 
-router.get("/", (req,res)=>{
+router.get("/hello", (req,res)=>{
     res.send("Hello World!!!");
 })
 
