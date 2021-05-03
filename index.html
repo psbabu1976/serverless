@@ -3,8 +3,8 @@
 <script>
     async ()=> {
         let res = await fetch(".netlify/functions/app");
-        res => data= res.json();
-        document.getElementById("got").innerHTML = (data);
+        //res = res.json();
+        document.getElementById("got").innerHTML = (res);
     }
     
 </script>
