@@ -35,7 +35,7 @@ const body = {
 const payload = JSON.stringify({
     msg: 'Hi how are you??'
 });
-app.post("/subscribe", (req, res) => {
+router.post("/subscribe", (req, res) => {
     console.log('Got a hit', req.url, req.body);
     const payload = JSON.stringify({
         msg: 'Hi how are you??'
