@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "normal": "nodemon server/app",
-    "build": "set CONTEXT=production && netlify-lambda build server",
+    "build": "netlify-lambda build server",
     "start": "netlify-lambda serve server",
     "postinstall": "netlify-lambda install"
   },
