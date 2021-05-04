@@ -58,7 +58,7 @@ router.get("/hello", (req, res) => {
 
 
 //app.use(express.static(__dirname));
-app.get("/", (req, res) => res.sendFile(process.cwd() + '/index.html'))
+router.get("/", (req, res) => res.sendFile(process.cwd() + '/index.html'))
 app.use('/.netlify/functions/app', router);
 
 
