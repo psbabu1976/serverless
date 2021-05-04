@@ -35,7 +35,7 @@
     })
     function send() {
             console.log('Sending...')
-            fetch('app/subscribe', {
+            fetch('.netlify/functions/app/subscribe', {
                 method: 'post',
                 body: JSON.stringify({
                     msg: "hidude"
