@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<h1>Hello All</h1>
+<h1>Hello Root</h1>
 <div id="got">Hi</div>
+<input type="text" id="msg" />
+<button onclick="send()">Send</button>
 <script>
-    window.addEventListener('load', () => {
+    const subscription = {
+        userVisibleOnly: true,
+        applicationServerKey: 'BDUpXczccyKiRuPOq1L3QjEmMHVQB9wpUcqYVZjIDyzeZrDcHU-XjMEf-gbJs1KzUz7gvIRCJpj_q7zwiVzW50Y'
+    }
+    window.addEventListener('load', async () => {
         console.log('haha');
 
-        fetch(".netlify/functions/app/hello")
-            .then(r => r.text()).then(r => document.getElementById("got").innerHTML = r)
+        if (navigator.serviceWorker) {
+
+
+            let sw = await navigator.serviceWorker.register("./sw.js");
+            console.log(sw);
+            let swr = await navigator.serviceWorker.ready;
+
+            let push = await swr.pushManager.subscribe(subscription)
+            console.log(JSON.stringify(push));
+
+
+
+
+        }
+
+        
+
+        //     fetch("app/hello")
+        //         .then(r => r.json())
+        //         .then(r => document.getElementById("got").innerHTML = r.body.message)
+        // 
     })
+    function send() {
+            fetch('/subscribe', {
+                method: 'post',
+                body: JSON.stringify({
+                    msg: "hidude"
+                }),
+                headers: {
+                    'content-type': 'application/json'
+                }
+            })
+            // .then(res => data = res.json()).then(data => console.log(data))
+            .catch(err => console.log(err))
+        }
 </script>

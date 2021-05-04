@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "normal": "nodemon server/app",
     "build": "set CONTEXT=production && netlify-lambda build server",
     "start": "netlify-lambda serve server",
     "postinstall": "netlify-lambda install"
@@ -16,6 +17,7 @@
     "netlify-lambda": "^2.0.5",
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
-    "serverless-http": "^2.7.0"
+    "serverless-http": "^2.7.0",
+    "web-push": "^3.4.4"
   }
 }
